@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;1000&display=swap");
+:root {
+  --primary-color: #4d3227;
+  --secondary-color: #dca07c;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Almarai", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+textarea{
+  font-family: "Almarai", sans-serif;
+
+}
+img {
+  max-width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+header .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  margin-top: 20px;
+}
+header a {
+  color: #fff;
+}
+header a:hover {
+  color: var(--secondary-color);
+}
+.contacts {
+  text-align: right;
+}
+
+/* Welcome */
+.welcome-block {
+  min-height: 400px;
+  height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../images/bg-welcome.png") 0 0 / cover no-repeat;
+  font-weight: 700;
+}
+
+.welcome-block .content {
+  max-width: 50%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none
+}
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+hr {
+  border-top: 5px var(--primary-color) dashed;
+  margin: 20px 0;
+}
+/* about-block */
+.about-block {
+  padding: 100px 0;
+  background-color: var(--secondary-color);
+}
+.two-lines {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 2em;
+}
+
+.two-lines:before,
+.two-lines:after {
+  content: "";
+  border-top: 3px #fff solid;
+  display: block;
+  width: 20%;
+}
+
+.about-block .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.border {
+  border: 3px var(--primary-color) solid;
+  padding: 20px;
+}
+.about-text {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--primary-color);
+  font-size: 28px;
+}
+.about-image {
+  border: 3px #fff solid;
+}
+.about-image img {
+  width: 100%;
+}
+
+.about-block-two {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+.about-block-two .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.about-block-two .block:nth-child(1) p {
+  margin-top: 35px;
+}
+.about-block-two b {
+  display: block;
+}
+
+/* Courses block */
+.courses-block {
+  padding: 100px 0;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+}
+.courses-block h2 {
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+.courses-block h2 span {
+  font-weight: 700;
+  display: block;
+  font-size: 1.5em;
+}
+
+.courses-block .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.courses-block img {
+  height: 145px;
+}
+.courses-block p {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/*sertificates*/
+.sertificates {
+  padding: 100px 0;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.sertificates h2 {
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+.sertificates h2 span {
+  font-weight: 700;
+  display: block;
+  font-size: 1.5em;
+}
+.sertificates .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.sertificates img {
+  height: 250px;
+}
+
+/* contacts-block */
+.contacts-block {
+  padding: 100px 0;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+}
+.contacts-block h2{
+    font-size: 2em;
+    margin-bottom: 0;
+}
+.contacts-block p{
+    margin-top: 0;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+.form-control {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+}
+
+
+.check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+}
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.check a{
+    color: dodgerblue
+}
+.contacts-block  .btn{
+    margin-top: 30px;
+}
+.contacts-block  .btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+.contacts-block form{
+    max-width: 600px;
+    margin: 0 auto
+}
+
+/* footer */
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+.address {
+    text-align: left;
+}
+.copyright {
+    text-align: center;
+
+}
+.phone {
+    text-align: right;
+}
+
+footer a:hover{
+    color: #ddd
+}
+
+
+/* student-page  */
+.students-page{
+    background-color: var(--secondary-color);
+}
+.students-page .main .container{
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+}
+.students-page h1 {
+  font-weight: 400;
+  margin-bottom: 60px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5em;
+
+}
+.students-page h1 span {
+  font-weight: 700;
+  display: block;
+  font-size: 1.2em;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.course-item {
+    border: 3px var(--primary-color) solid;
+    padding: 20px;
+    text-align: center;
+}
+.icon {
+}
+.title {
+    font-weight: 700;
+    margin-top: 10px;
+}
+.desc {
+}
+.course-item .btn {
+    margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  header nav {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin-top: 0;
+  }
+}
